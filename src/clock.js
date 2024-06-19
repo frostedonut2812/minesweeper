@@ -3,22 +3,19 @@ import {useEffect} from "react";
 import {useState} from "react";
 
 export default function Clock({isrunning}) {
-    const [time, setTime] = useState(0)
+        const [time, setTime] = useState(0)
 
-    useEffect(() => {
+        useEffect(() => {
 
-        setTimeout(() => {
+            setTimeout(() => {
 
+                if (isrunning) {
+                setTime(time+1)}
+            }, 1000)
 
-            setTime(time +1 )
-            console.log(time)
-        }, 1000)
-
-    })
-    return(<h3>{time}</h3>)
-
-
-
+        }, [time])
+        return (<h3>Time: {time}</h3>
+        )
 
 
 
