@@ -1,0 +1,24 @@
+$size:1em;
+@mixin theme($theme: red) {
+  color: $theme;
+  height: $size;
+  width: $size;
+  border: 1px solid $theme;
+  margin: 2px;
+
+}
+
+
+.tile{
+@include theme(red);
+
+}
+.click{
+  @include theme(green);
+
+
+}
+.notclick{
+  @include theme(blue);
+}
+

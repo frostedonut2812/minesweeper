@@ -13,7 +13,7 @@ export default function Clock({isrunning}) {
                 setTime(time+1)}
             }, 1000)
 
-        }, [time])
+        }, [time,isrunning])
         return (<h3>Time: {time}</h3>
         )
 
